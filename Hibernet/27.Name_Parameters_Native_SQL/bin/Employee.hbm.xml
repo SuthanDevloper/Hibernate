@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+	<hibernate-mapping>
+    	<class name="com.suthan.pojo.Employee" table="emp1">
+    	 	<id name="eno" />
+    	 		
+    	 	<property name="ename"/>
+    		<property name="esal" /> 
+    		<property name="eaddr"/>
+    	</class>
+	
+    	<!--   <sql-query name="sql_query">
+    		<return class="com.suthan.pojo.Employee"/>
+    	 select * from emp1 where ESAL >= ? and ESAL &lt; =? 
+    		 select * from emp1 where ESAL >= :min and ESAL &lt;= :max  
+    		select * from emp1 where ESAL >= ? and ESAL &lt;= :max  
+    	</sql-query>
+    	
+    	
+    	<sql-query name="sql_query">
+    		<return-scalar column="ENO" type="int"/>
+    		<return-scalar column="ENAME" type="string"/>
+    		<return-scalar column="ESAL" type="float"/>
+    		
+    		<return-scalar column="EADDR" type="string"/>
+    	select ENO, ENAME,ESAL,EADDR  from emp1  
+	</sql-query> -->
+	</hibernate-mapping>

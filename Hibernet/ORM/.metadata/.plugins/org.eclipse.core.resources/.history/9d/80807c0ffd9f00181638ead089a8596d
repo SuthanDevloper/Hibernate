@@ -1,0 +1,40 @@
+package com.suthan.test;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import com.suthan.entity.Employee;
+public class Test {
+
+	public static void main(String[] args) {
+	
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("emp");
+		EntityManager entityManagee =factory.createEntityManager();
+		/* ----Add employee-----
+		EntityTransaction entityTransaction = entityManagee.getTransaction();
+		entityTransaction.begin();
+		Employee emp =new Employee();
+		emp.setEno(111);
+		emp.setEname("bala");
+		emp.setEsal(50000);
+		emp.setEaddr("London");
+		entityManagee.persist(emp);
+		entityTransaction.commit();
+		
+		System.out.println("Employee Insert Successfully"); */
+		
+		Employee emp =entityManagee.find(Employee.class, 111) ;
+		System.out.println("Employee details----------"); 
+		System.out.println("Employee Number----------"+emp.getEno()); 
+		System.out.println("Employee Name---------"+emp.getEname());
+		System.out.println("Employee Salary----------"+emp.getEsal());
+		System.out.println("Employee Address----------"+emp.getEaddr());
+		entityManagee.close(); 
+		
+		
+		
+	}
+
+}

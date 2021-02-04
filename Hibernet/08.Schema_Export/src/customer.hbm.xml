@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping>
+    	<class name="com.suthan.pojo.Customer" table="customer">
+    	 	<!-- <id name="cid" column="CID" length="5" type ="string"/>
+    	 	<property name="cname" column="CNAME" length="10" type ="string"/>
+    		<property name="caddr" column="CADDR" length="10" type ="string"/> 
+    		<property name="cemail" column="CMAIL" length="15" type ="string"/> -->
+    	
+    	<id name="cid" column="CID" />
+    	 	<property name="cname"/>
+    		<property name="caddr"/> 
+    		<property name="cemail"/>
+    	
+    	
+    	</class>
+    
+    </hibernate-mapping>

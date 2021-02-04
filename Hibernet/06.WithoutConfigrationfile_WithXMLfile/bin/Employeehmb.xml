@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+	<!--  step 2  -->
+	<hibernate-mapping>
+		<class name="com.suthan.pojo.Employee" table="emp1">
+		
+			<composite-id>
+				<key-property name="ENO"/>
+				<key-property name="ENAME"/>
+			
+			</composite-id>
+			<property name="ename" column="ENAME"/>
+			<property name="esal" column="ESAL"/>
+			<property name="eaddr" column="EADDR"/>
+		</class>
+	 </hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+	<hibernate-mapping>
+    	<class name="com.suthan.pojo.Employee" table="emp1">
+    	 	<id name="eno" >
+    	 		<!--  <generator class="sequence"> -->
+    	 		
+    	 		<!--   <generator class="identity"> -->
+    	 		<!-- <generator class="hilo">
+    	 				<param name="table">my_table</param>
+    	 				<param name="column">my_column</param>
+    	 				<param name="max_lo">5</param> 	
+    	 		</generator> -->
+    	 		
+    	 		<!-- <generator class="native"> -->
+    	 		<generator class="uuid">
+    	 		
+    	 		</generator>
+    	 	
+    	 	</id>
+    	 	<property name="ename"/>
+    		<property name="esal" /> 
+    		<property name="eaddr"/>
+    	</class>
+	</hibernate-mapping>

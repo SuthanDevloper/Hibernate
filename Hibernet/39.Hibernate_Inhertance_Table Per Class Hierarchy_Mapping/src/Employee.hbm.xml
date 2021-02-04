@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    
+    <class name="com.suthan.pojo.Account" table="account">
+    	<id name="accNo"/>
+    	<discriminator column="TYPE" type="string"/>
+    	<property name="accName"/>
+      	<property name="accType"/>
+    
+    <subclass name="com.suthan.pojo.StudentAccount" discriminator-value="std" >
+    	<property name="sid"/>
+      		<property name="sbranch"/>
+      		<property name="smarks"/>
+    </subclass>
+    
+    <subclass name="com.suthan.pojo.EmployeeAccount" discriminator-value="emp">
+    <property name="eid"/>
+      		<property name="esal"/>
+      		<property name="eaddr"/>
+    </subclass>
+    </class>
+    
+     <!--  <class name="com.suthan.pojo.Account" table="account1">
+      	<id name="accNo"/>
+      	<discriminator column="TYPE" type="string"/>
+      		<property name="accName"/>
+      		<property name="accType"/>
+      	<subclass name="com.suthan.pojo.StudentAccount" discriminator-value="std">
+      		<property name="sid"/>
+      		<property name="sbranch"/>
+      		<property name="smarks"/>
+   
+      	</subclass>
+      
+      	<subclass name="com.suthan.pojo.EmployeeAccount" discriminator-value="emp">
+      		<property name="eid"/>
+      		<property name="esal"/>
+      		<property name="eaddr"/>
+   
+      	</subclass>
+      
+      </class>   -->
+    </hibernate-mapping>
+    

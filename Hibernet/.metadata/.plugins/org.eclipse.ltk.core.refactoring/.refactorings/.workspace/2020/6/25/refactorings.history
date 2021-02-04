@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Schema_Export&apos; to &apos;app8_Schema_Export&apos;" description="Rename resource &apos;Schema_Export&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Schema_Export" name="app8_Schema_Export" stamp="1592552013940" updateReferences="true"/>
+</session>

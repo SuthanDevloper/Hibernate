@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+		<class name="com.suthan.pojo.Employee" table="EMP10">
+			<id name="eno"/>
+			<property name="ename"/>
+			<property name="esal"/>
+		
+		
+		<component name="addr" class="com.suthan.pojo.Address">
+			<property name="pno"/>
+			<property name="street"/>
+			<property name="city"/>
+		</component>
+			
+		<component name="acc" class="com.suthan.pojo.Account">
+				<property name="accNo"/>
+				<property name="accName"/>
+				<property name="accType"/>
+		</component>	
+		</class>
+	</hibernate-mapping>

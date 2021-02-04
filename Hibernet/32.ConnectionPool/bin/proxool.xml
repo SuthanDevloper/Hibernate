@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxool-config>
+		<proxool>
+			<alias>proxool</alias>
+			<driver-class>oracle.jdbc.OracleDriver</driver-class>
+			<driver-url>jdbc:oracle:thin:@localhost:1521:xe</driver-url>
+			<driver-properties>
+				<property name="user" value="system"/>
+				<property name="password" value="suthan"/>
+			</driver-properties>
+			<minimum-connection-count>5</minimum-connection-count>
+			<maximum-connection-count>25</maximum-connection-count>
+		</proxool>
+
+</proxool-config>
